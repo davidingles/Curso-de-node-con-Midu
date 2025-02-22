@@ -1,0 +1,27 @@
+### Recuperar todas las pelicualas
+GET http://localhost:1234/movies
+
+### Recuperar una pelicula por id
+GET http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+
+### Recuperar una pelicula por género
+GET http://localhost:1234/movies?genre=DRAMA
+
+//CUIDADO SI LA IDENTACION NO ESTA BIEN NO FUNCIONA
+### Crear una pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "AKIRA",
+  "year": 1981,
+  "director": "toriyama",
+  "duration": 152,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": [
+    "Action",
+    "Crime",
+    "Drama"
+  ],
+  "rate": 9
+}
